@@ -1,8 +1,8 @@
 /* Colours */
-a:hover {
+a:hover, footer h1 {
     color: #47c0b5; /* Emmanuel cyan against black background */
 }
-h1.calendar, .calendar-date, .post-image ~ h1 {
+h1.calendar, .calendar-date, .post-image {
     color: #008080; /* Emmanuel cyan against white background */
 }
 header, footer, body {
@@ -22,6 +22,86 @@ footer li {
     border-style: solid;
 }
 
+/* Columns */
+#main-column {
+    float: left;
+    width: 65.3333333333%;
+}
+.main-column-full {
+    float: left;
+    width: 100%;
+}
+.main-column-half {
+    float: left;
+    width: 46.9387755%;
+    margin-left: 6.122449%;
+}
+.main-column-half:first-child {
+    margin-left: 0px;
+}
+#banner-column {
+    float: right;
+    width: 30.6666666667%;
+}
+#banner-column:after {
+    content: "";
+    display: table;
+    clear: right;
+}
+#calendar-column {
+    float: right;
+    width: 30.6666666667%;
+}
+@media (max-width: 640px) {
+    #main-column {
+        width: 100%;
+    }
+    .main-column-half {
+        width: 48%;
+        margin-left: 4%;
+    }
+    #banner-column {
+        float: left;
+        width: 100%;
+    }
+    #calendar-column {
+        float: left;
+        width: 100%;
+    }
+}
+.footer-column-half {
+    float: left;
+    width: 48%;
+    margin-left: 4%;
+}
+.footer-column-half:first-child {
+    margin-left: 0px;
+}
+.footer-column-quarter {
+    float: left;
+    width: 45.833333333%;
+    margin-left: 8.333333333%;
+}
+.footer-column-quarter:first-child {
+    margin-left: 0px;
+}
+@media (max-width: 800px) {
+    .footer-column-half {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .footer-column-quarter {
+        width: 48%;
+        margin-left: 4%;
+    }
+    @media (max-width: 400px) {
+        .footer-column-quarter {
+            width: 100%;
+            margin-left: 0px;
+        }
+    }
+}
+
 /* Generic */
 a {
     color: inherit;
@@ -32,6 +112,7 @@ img {
 }
 address {
     font-style: normal;
+    margin-bottom: 15px;
     margin-bottom: 1.5rem;
 }
 .iframe-container-square {
@@ -53,7 +134,7 @@ address {
     -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 4px 10px rgba(0, 0, 0, 0.06);
     -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 4px 10px rgba(0, 0, 0, 0.06);
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 4px 10px rgba(0, 0, 0, 0.06);
-    margin-bottom: 1.5rem;
+    margin-bottom: 20px;
 }
 .banner-text {
     font-weight: lighter;
@@ -75,24 +156,28 @@ address {
     width: 100%;
     height: auto;
 }
-.post-image-text-small h1 {
+.post-image > h1 {
+    font-size: 17px;
     font-size: 1.75rem;
     margin-bottom: 0px;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 640px) {
     .post-image-text {
         position: absolute;
         width: 100%;
         left: 0px;
         bottom: 0px;
+        color: #333;
         background-color: #ffffff;
         opacity: 0.6;
         filter: alpha(opacity=60);
         box-sizing: border-box;
+        margin-bottom: 15px;
         margin-bottom: 1.5rem;
     }
     .post-image-text h1 {
+        padding: 10px 20px;
         padding: 1rem 2rem;
         margin-bottom: 0px;
     }
@@ -134,6 +219,7 @@ header {
 }
 #header-nav h1 {
     font-size: 140%;
+    margin-bottom: 5px;
     margin-bottom: 0.5rem;
     text-transform: uppercase;
 }
@@ -146,6 +232,7 @@ footer {
 }
 footer h1 {
     font-size: 120%;
+    margin-bottom: 10px;
     margin-bottom: 1rem;
     text-transform: uppercase;
 }
@@ -153,13 +240,13 @@ footer ul {
     list-style: none;
 }
 footer li {
-    padding-top: 8px;
-    border-width: 1px 0px 0px 0px;
-    margin-top: 8px;
+    padding-bottom: 8px;
+    border-width: 0px 0px 1px 0px;
+    margin-bottom: 8px;
 }
-footer li:first-child {
-    border-top-width: 0px;
-    padding-top: 0px;
+footer li:last-child {
+    border-bottom-width: 0px;
+    padding-bottom: 0px;
 }
 #CofElogo {
     margin: 20px 0px;
@@ -176,7 +263,7 @@ footer li:first-child {
 
 /* Main content */
 .main {
-    padding-top: 1.5rem;
+    padding-top: 20px;
 }
 
 /* Calendar */
