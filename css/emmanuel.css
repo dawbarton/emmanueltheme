@@ -161,6 +161,9 @@ address {
     font-size: 1.75rem;
     margin-bottom: 0px;
 }
+.post-image-text h1 {
+    margin-bottom: 0px;
+}
 
 @media (min-width: 640px) {
     .post-image-text {
